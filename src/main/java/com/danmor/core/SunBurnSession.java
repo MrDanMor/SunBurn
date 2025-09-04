@@ -80,8 +80,14 @@ public class SunBurnSession implements IDecimalCustomizer {
 
         player.sendMessage("");
         player.sendMessage(ChatColor.GOLD + "-- SUNBURN PLUGIN STATUS --");
-        player.sendMessage("Current sun activity: " + isActive);
-        player.sendMessage("Sun strikes each " + tickPeriod + " ticks");
+
+        if (isActive) {
+            player.sendMessage("Current sun activity: §2" + isActive);
+        } else {
+            player.sendMessage("Current sun activity: §4" + isActive);
+        }
+        
+        player.sendMessage("Sun strikes each §e" + tickPeriod + "§f ticks");
 
         playerAffector.printStatus(player);
 

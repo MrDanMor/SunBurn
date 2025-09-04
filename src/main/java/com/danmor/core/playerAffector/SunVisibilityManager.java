@@ -42,8 +42,8 @@ public class SunVisibilityManager {
 
 
     public void printStatus(Player player) {
-        player.sendMessage("Current plugin mode is: " + mode);
-        player.sendMessage("Minimal dangerous light level is: " + minLightLevel);
+        player.sendMessage("Current plugin mode is: §e" + mode);
+        player.sendMessage("Minimal dangerous light level is: §3" + minLightLevel);
     }
 
 

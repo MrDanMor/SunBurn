@@ -48,8 +48,8 @@ public class PlayerAffector implements ISunDamager {
     public void printStatus(Player player) {
         sunVisibilityManager.printStatus(player);
 
-        player.sendMessage("Players are damaged " + playerDamage + " point(s) each sun strike");
-        player.sendMessage("Players are burning " + burningDuration + " ticks after each strike");
+        player.sendMessage("Players are damaged by §e" + playerDamage + "§f point(s) each sun strike");
+        player.sendMessage("Players are burning §e" + burningDuration + "§f ticks after each strike");
 
         if (waterDefence) {
             player.sendMessage("Water protects from sun permanently");
