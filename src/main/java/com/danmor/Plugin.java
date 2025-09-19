@@ -38,11 +38,20 @@ public class Plugin extends JavaPlugin {
     }
 
 
+    public FileManager getFileManager() {
+        return fileManager;
+    }
+
+
     private void registerCommands() {
         LifecycleEventManager<org.bukkit.plugin.Plugin> manager = this.getLifecycleManager();
         manager.registerEventHandler(LifecycleEvents.COMMANDS, event -> {
             event.registrar().register(SunBurn.createCommand(this),
                 "SunBurn core command"
+            );
+
+            event.registrar().register(SunBurn.createAlias(this),
+                "SunBurn core command alias"
             );
         });
     }
