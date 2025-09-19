@@ -12,7 +12,7 @@ public class Plugin extends JavaPlugin {
     private final SunBurnSession session = new SunBurnSession(this);
     private final FileManager fileManager = new FileManager(this);
 
-    
+
     @Override
     public void onEnable() {
         getLogger().info("SunBurn plugin has been enabled");
