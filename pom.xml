@@ -19,16 +19,16 @@
 
     <repositories>
         <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+            <id>papermc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
     </repositories>
 
     <dependencies>
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.21.7-R0.1-SNAPSHOT</version>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.21.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -40,13 +40,12 @@
                 <directory>${project.basedir}/src/main/resources</directory>
                 <includes>
                     <include>plugin.yml</include>
+                    <include>paper-plugin.yml</include>
                     <include>config.yml</include>
                     <include>settings/transparent-materials.yml</include>
                     <include>settings/transparent-tags.yml</include>
                     <include>settings/helmet-materials.yml</include>
                     <include>state/current-state.yml</include>
-                    <include>assets/**</include>
-                    <include>data/**</include>
                 </includes>
             </resource>
         </resources>

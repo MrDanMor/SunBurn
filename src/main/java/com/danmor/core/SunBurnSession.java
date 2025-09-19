@@ -1,6 +1,5 @@
 package com.danmor.core;
 
-import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -79,7 +78,7 @@ public class SunBurnSession implements IDecimalCustomizer {
         Player player = (Player) executor;
 
         player.sendMessage("");
-        player.sendMessage(ChatColor.GOLD + "-- SUNBURN PLUGIN STATUS --");
+        player.sendMessage("§6-- SUNBURN PLUGIN STATUS --");
 
         if (isActive) {
             player.sendMessage("Current sun activity: §2" + isActive);
@@ -91,8 +90,8 @@ public class SunBurnSession implements IDecimalCustomizer {
 
         playerAffector.printStatus(player);
 
-        player.sendMessage(ChatColor.GOLD + "--- Thanks for using my plugin!");
-        player.sendMessage(ChatColor.GOLD + "--- Author: DanMor (Mr__Palladium)");
+        player.sendMessage("§6--- Thanks for using my plugin!");
+        player.sendMessage("§6--- Author: DanMor (Mr__Palladium)");
         player.sendMessage("");
     }
 

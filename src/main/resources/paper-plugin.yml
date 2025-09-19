@@ -1,0 +1,5 @@
+name: SunBurn
+version: '1.0.0'
+main: com.danmor.Plugin
+bootstrapper: com.danmor.bootstrap.DamageTypeManager
+api-version: '1.21.8'
