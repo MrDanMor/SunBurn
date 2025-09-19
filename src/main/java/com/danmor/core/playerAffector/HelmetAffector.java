@@ -63,15 +63,15 @@ public class HelmetAffector implements IDecimalCustomizer {
 
 
     public void printStatus(Player player) {
-        player.sendMessage("Helmet is damaged by §e" + helmetDamage + "§f point(s) per each sun strike\n");
+        player.sendMessage("Helmet is damaged by §e" + helmetDamage + "§f point(s) per each sun strike");
 
         if (nonHelmetDropChance < 0) {
-            player.sendMessage("Item in helmet slot §4does not protect§f from sun\n");
+            player.sendMessage("Item in helmet slot §4does not protect§f from sun");
         } else if (nonHelmetDropChance == 0) {
-            player.sendMessage("Item in helmet slot §2protects§f from sun permanently\n");
+            player.sendMessage("Item in helmet slot §2protects§f from sun permanently");
         } else {
             String value = getFormattedFloat((float) nonHelmetDropChance, chanceAccuracy);
-            player.sendMessage("Item in helmet slot is dropped with §e" + value + "%§f chance\n");
+            player.sendMessage("Item in helmet slot is dropped with §e" + value + "%§f chance");
         }
     }
 

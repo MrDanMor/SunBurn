@@ -49,13 +49,13 @@ public class PlayerAffector {
     public void printStatus(Player player) {
         sunVisibilityManager.printStatus(player);
 
-        player.sendMessage("Players are damaged by §e" + playerDamage + "§f point(s) each sun strike\n");
-        player.sendMessage("Players are burning §e" + burningDuration + "§f ticks after each strike\n");
+        player.sendMessage("Players are damaged by §e" + playerDamage + "§f point(s) each sun strike");
+        player.sendMessage("Players are burning §e" + burningDuration + "§f ticks after each strike");
 
         if (waterDefence) {
-            player.sendMessage("Water protects from sun permanently\n");
+            player.sendMessage("Water protects from sun permanently");
         } else {
-            player.sendMessage("Water does not protect from sun permanently\n");
+            player.sendMessage("Water does not protect from sun permanently");
         }
 
         helmetAffector.printStatus(player);
