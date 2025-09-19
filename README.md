@@ -14,10 +14,26 @@
   - customizable lists of helmets and transparent blocks  
   - configurable drop chance for non-helmet head-slot items
 
+## Commands
+`/sunburn on` — activates sunburn  
+`/sunburn off` — deactivates sunburn  
+`/sunburn status` — shows the current config parameters in chat  
+`/sunburn reload` — reloads the config  
+`/sb` — alias for `/sunburn`
+
+> [!WARNING]  
+> You must have **OP** to execute these commands.
 
 ## Default config
 ```
-# SunBurn plugin config:
+#   _____ _    _ _   _ ____  _    _ _____  _   _ 
+#  / ____| |  | | \ | |  _ \| |  | |  __ \| \ | |
+# | (___ | |  | |  \| | |_) | |  | | |__) |  \| |
+#  \___ \| |  | | . ` |  _ <| |  | |  _  /| . ` |
+#  ____) | |__| | |\  | |_) | |__| | | \ \| |\  |
+# |_____/ \____/|_| \_|____/ \____/|_|  \_\_| \_|
+
+# Main plugin configuration
 
 cooldown-tick-period: 60
 # Ticks: 20 - 100
@@ -27,6 +43,7 @@ cooldown-tick-period: 60
 burning-duration: 100
 # Ticks: 0 - 500
 # Defines how long the player will burn after each sun strike
+# BE AWARE - if player is already burning, this may do nothing
 
 sun-burn-mode: SKYLIGHT
 # Mode: SKYLIGHT / ANYLIGHT / MATERIALCONFIG
@@ -53,25 +70,31 @@ min-light-level: 15
 # If set to 16 - it never damages; if set to 0 - it damages anywhere
 # This parameter does nothing if MATERIALCONFIG mode is set
 
+player-damage: 0
+# Integer: 0 - 100
+# Defines how much damage player will receive on each sun strike
+# BE AWARE - this is direct damage, it does not include potential damage by fire
+
 helmet-damage: 1
 # Integer: 0 - 50
-# Defines how much damage a helmet will receive on each sun strike
+# Defines how much damage equipped helmet will receive on each sun strike
 # You can manually change list of items that are considered as helmets ('settings' folder)
 # In this folder there is "helmet-materials.yml', check its content
 
-non-helmet-drop-chance: 5
+non-helmet-drop-chance: 3.5
 # Percentage: 0 - 100 (may be decimal, up to 4 digits accuracy)
 # Defines how likely equipped non-helmet will drop on each sun strike
-# If less than 0 - any non-helmet item does not defend from the sun!
-# If set to 0 - any non-helmet (a pumkin or player's head) defends from the sun unless taken off
+# If less than 0 - any non-helmet item (pumkin, player's head, etc.) does not defend from the sun!
+# If set to 0 - any non-helmet item defends from the sun unless taken off
 # You can manually change list of items that are considered as 'non-protecting' ('settings' folder)
 # In this folder there is "helmet-materials.yml', check its content
 # Items marked as 'non-protecting' WILL NOT defend from the sun, even if this config is enabled
 # Such items will not be dropped from the head slot either (no matter what the drop chance is)
+# Items marked as 'perm-protecting' WILL defend from the sun and have no chance to be dropped
 
 water-defence: false
 # Boolean: true / false
-# Permanently blocks sun damage if player is in water
+# Permanently blocks any sun damage if player is in water
 ```
 
 ## Material Config
