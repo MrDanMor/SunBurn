@@ -39,7 +39,6 @@
             <resource>
                 <directory>${project.basedir}/src/main/resources</directory>
                 <includes>
-                    <include>plugin.yml</include>
                     <include>paper-plugin.yml</include>
                     <include>config.yml</include>
                     <include>settings/transparent-materials.yml</include>
