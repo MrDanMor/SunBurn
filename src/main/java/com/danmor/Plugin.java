@@ -1,4 +1,5 @@
 package com.danmor;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.danmor.commands.SunBurn;
@@ -55,6 +56,4 @@ public class Plugin extends JavaPlugin {
             );
         });
     }
-
-
 }

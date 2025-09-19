@@ -3,11 +3,11 @@ package com.danmor.core;
 import org.bukkit.GameMode;
 import org.bukkit.World.Environment;
 import org.bukkit.damage.DamageSource;
+import org.bukkit.damage.DamageType;
 import org.bukkit.entity.Player;
 
 import com.danmor.core.playerAffector.HelmetAffector;
 import com.danmor.core.playerAffector.SunVisibilityManager;
-import com.danmor.mechanics.DamageTypes;
 
 public class PlayerAffector {
     private final int MAX_BURNING_DURATION = 500;
@@ -107,7 +107,7 @@ public class PlayerAffector {
 
 
     private void damagePlayer(Player player) {
-        DamageSource source = DamageSource.builder(DamageTypes.sun()).build();
+        DamageSource source = DamageSource.builder(DamageType.ON_FIRE).build();
         player.damage(playerDamage, source);
     }
 
